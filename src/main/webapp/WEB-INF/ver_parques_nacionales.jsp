@@ -20,12 +20,10 @@
     <% for (ParqueNacional p : parques) { %>
         <tr>
             <td>
-            <a href="./ver_parque.jsp?id=<% p.getIdParqueNacional() %>">
-                <% parque.getIdParqueNacional() %>
-            </a>
+                <a href="./ver_parque.jsp?id=<%= p.getIdParqueNacional() %>">
+                    <%= p.getIdParqueNacional() %>
+                </a>
             </td>
-
-            <td><%= p.getIdParqueNacional() %></td>
             <td><%= p.getNombre() %></td>
         </tr>
     <% } %>
