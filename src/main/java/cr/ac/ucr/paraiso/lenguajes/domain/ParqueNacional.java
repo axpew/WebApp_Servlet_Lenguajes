@@ -3,8 +3,11 @@ package cr.ac.ucr.paraiso.lenguajes.domain;
 public class ParqueNacional {
     private int idParqueNacional;
     private String nombre;
+    private Provincia provincia;
+
 
     public ParqueNacional() {
+        this.provincia = new Provincia(); 
     }
 
     public int getIdParqueNacional() {

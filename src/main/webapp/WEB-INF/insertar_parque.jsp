@@ -12,7 +12,7 @@
     <% Set<Provincia> provincias = 
         (Set<Provincia>) request.getAttribute("provincias"); %>
     
-    <form action="./insertarParqueNacional" method="post">
+    <form action="./guardarParque" method="post">
         <label for="idParque">ID Parque Nacional:</label>
         <input type="text" id="idParque" name="idParque" required>
         <br><br>
@@ -22,11 +22,6 @@
         <br><br>
         
         <label for="provincia">Provincia:</label>
-
-        <% 
-            Set<Provincia> provincias = (Set<Provincia>) request.getAttribute("provincias");
-        %>
-
         <select id="provincia" name="provincia" required>
         <% for (Provincia prov : provincias) { %>
             <option value="<%= prov.getId() %>"><%= prov.getNombre() %></option>
