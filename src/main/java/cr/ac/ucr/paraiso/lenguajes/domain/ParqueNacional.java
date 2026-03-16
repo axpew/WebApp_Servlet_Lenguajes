@@ -5,7 +5,6 @@ public class ParqueNacional {
     private String nombre;
     private Provincia provincia;
 
-
     public ParqueNacional() {
         this.provincia = new Provincia(); 
     }
@@ -24,5 +23,13 @@ public class ParqueNacional {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Provincia getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(Provincia provincia) {
+        this.provincia = provincia;
     }
 }

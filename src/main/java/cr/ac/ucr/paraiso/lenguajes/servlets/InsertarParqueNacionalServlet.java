@@ -36,13 +36,12 @@ public class InsertarParqueNacionalServlet extends HttpServlet {
         ParqueNacional parqueNacional = new ParqueNacional();
         parqueNacional.setIdParqueNacional(Integer.parseInt(req.getParameter("idParque")));
         parqueNacional.setNombre(req.getParameter("nombre"));
-        int idProvincia = Integer.parseInt(req.getParameter("idProvincia"));
+        int idProvincia = Integer.parseInt(req.getParameter("provincia"));
         Provincia provincia = new Provincia();
         provincia.setId(idProvincia);
-        parqueNacional.setProvincia(provincia); 
-        // TODO: Aquí se podría guardar el parque nacional en una base de datos o en memoria  
+        parqueNacional.setProvincia(provincia);
         
-        req.setAttribute("id", parqueNacional.getIdParqueNacional());
-        req.setAttribute("nombre", parqueNacional.getNombre());
-        req.getRequestDispatcher("/ver_parque.jsp").forward(req, resp);
+        req.setAttribute("parque", parqueNacional);
+        req.getRequestDispatcher("/WEB-INF/ver_parque_nacional.jsp").forward(req, resp);
     }
+}

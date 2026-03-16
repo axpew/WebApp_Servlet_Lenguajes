@@ -12,7 +12,7 @@
     <% Set<Provincia> provincias = 
         (Set<Provincia>) request.getAttribute("provincias"); %>
     
-    <form action="./guardarParque" method="post">
+    <form action="./insertarParque" method="post">
         <label for="idParque">ID Parque Nacional:</label>
         <input type="text" id="idParque" name="idParque" required>
         <br><br>
