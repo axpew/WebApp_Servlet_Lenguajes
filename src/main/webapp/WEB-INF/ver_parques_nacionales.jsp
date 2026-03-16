@@ -19,12 +19,18 @@
         </tr>
     <% for (ParqueNacional p : parques) { %>
         <tr>
-            <td><%= p.getIdParqueNacional() %></td>
+            <td>
+                <a href="./verParque?id=<%= p.getIdParqueNacional() %>">
+                    <%= p.getIdParqueNacional() %>
+                </a>
+            </td>
             <td><%= p.getNombre() %></td>
         </tr>
     <% } %>
     </table>
     
+    <br>
+    <a href="./insertarParque">Insertar nuevo parque</a>
     <br>
     <a href="./index.html">Volver al inicio</a>
 </body>
