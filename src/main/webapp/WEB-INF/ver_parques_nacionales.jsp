@@ -19,14 +19,13 @@
         </tr>
     <% for (ParqueNacional p : parques) { %>
         <tr>
-            <td>
-                <a href="./ver_parque.jsp?id=<%= p.getIdParqueNacional() %>">
-                    <%= p.getIdParqueNacional() %>
-                </a>
-            </td>
+            <td><%= p.getIdParqueNacional() %></td>
             <td><%= p.getNombre() %></td>
         </tr>
     <% } %>
     </table>
+    
+    <br>
+    <a href="./index.html">Volver al inicio</a>
 </body>
 </html>
